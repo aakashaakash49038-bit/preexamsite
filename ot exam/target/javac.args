@@ -1,0 +1,5 @@
+-cp
+C:/Users/aakas/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar;C:/Users/aakas/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar;C:/Users/aakas/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar
+-d
+target/classes
+src/main/java/com/preexam/PreExamSiteApplication.java

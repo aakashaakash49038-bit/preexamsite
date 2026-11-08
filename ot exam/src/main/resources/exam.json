@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "title": "Practice exam",
+    "durationMinutes": 20,
+    "correctMarks": 4,
+    "negativeMarks": 1
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Which part of a computer is often described as its ‘brain’?",
+      "options": ["RAM", "CPU", "SSD", "Keyboard"],
+      "correctIndex": 1
+    },
+    {
+      "id": "q2",
+      "text": "Which HTML element creates a hyperlink?",
+      "options": ["<link>", "<a>", "<href>", "<url>"],
+      "correctIndex": 1
+    },
+    {
+      "id": "q3",
+      "text": "What is the result of 12 × 8?",
+      "options": ["86", "92", "96", "108"],
+      "correctIndex": 2
+    },
+    {
+      "id": "q4",
+      "text": "Which planet is closest to the Sun?",
+      "options": ["Venus", "Earth", "Mars", "Mercury"],
+      "correctIndex": 3
+    },
+    {
+      "id": "q5",
+      "text": "Which CSS property changes the text color?",
+      "options": ["font-style", "color", "background", "text-decoration"],
+      "correctIndex": 1
+    }
+  ]
+}

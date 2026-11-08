@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Pre Exam Site</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Pre Exam Site home">
+        <span class="brand-mark">P<span>+</span></span>
+        <span class="brand-name">pre<span>exam</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="connection"><span class="live-dot"></span> Exam portal</span>
+        <button class="admin-link" id="admin-open" type="button"><span class="admin-icon">⚙</span> Admin</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="main-content" aria-live="polite">
+      <section id="loading-view" class="loading-view"><span class="spinner"></span><p>Preparing your exam...</p></section>
+      <section id="welcome-view" class="welcome-view hidden">
+        <div class="welcome-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT STEP STARTS HERE</div>
+          <h1>Show what<br>you <span>know.</span></h1>
+          <p class="welcome-description">Take a breath, get comfortable, and do your best. Your practice exam is ready when you are.</p>
+          <button id="start-exam" class="primary-button start-button" type="button">Start exam <span aria-hidden="true">↗</span></button>
+          <div class="welcome-footnote"><span class="tiny-shield">✓</span> Your progress is saved for this session</div>
+        </div>
+        <div class="exam-preview">
+          <div class="preview-orbit orbit-one"></div><div class="preview-orbit orbit-two"></div>
+          <div class="preview-card">
+            <div class="preview-top"><span class="preview-label">UP NEXT</span><span class="preview-status"><span></span> READY</span></div>
+            <div class="preview-art"><div class="art-paper"><div class="paper-check">✓</div><div class="paper-line line-a"></div><div class="paper-line line-b"></div><div class="paper-line line-c"></div><div class="paper-choice"><i></i><b></b></div><div class="paper-choice"><i class="checked"></i><b></b></div><div class="paper-choice"><i></i><b></b></div></div><div class="art-spark spark-a">✳</div><div class="art-spark spark-b">✦</div><div class="art-star">✧</div></div>
+            <h2 id="welcome-title">Practice exam</h2>
+            <p class="preview-subtitle">A focused session, at your pace.</p>
+            <div class="preview-divider"></div>
+            <div class="preview-meta"><div><span class="meta-icon">◷</span><strong id="welcome-duration">20 min</strong><small>Duration</small></div><div><span class="meta-icon">▤</span><strong id="welcome-questions">5 questions</strong><small>Multiple choice</small></div><div><span class="meta-icon">−</span><strong id="welcome-penalty">1 mark</strong><small>Wrong answer</small></div></div>
+          </div>
+          <div class="float-chip chip-clock"><span>◷</span> Stay focused</div><div class="float-chip chip-score"><span>✦</span> One question at a time</div>
+        </div>
+      </section>
+
+      <section id="exam-view" class="exam-view hidden">
+        <div class="exam-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> <span id="exam-title-label">PRACTICE EXAM</span></div><h1>Keep your focus.</h1></div><div id="timer" class="timer"><span class="timer-icon">◷</span><div><small>TIME REMAINING</small><strong>20:00</strong></div></div></div>
+        <div class="exam-layout"><aside class="question-sidebar"><div class="sidebar-label">YOUR PROGRESS <span id="answered-count">0 / 5</span></div><div id="question-nav" class="question-nav"></div><div class="marking-note"><span>−</span><p><strong>Heads up</strong><br>Incorrect answers lose marks.</p></div></aside><div class="question-area"><div class="question-card"><div class="question-card-top"><span id="question-number" class="question-count">QUESTION 01</span><span id="question-mark" class="marks-pill">+4 marks</span></div><div class="question-progress"><span id="question-progress-fill"></span></div><h2 id="question-text"></h2><div id="question-image-wrap" class="question-image-wrap hidden"><img id="question-image" alt="Question illustration"></div><p class="select-hint">Choose the best answer.</p><div id="answer-list" class="answer-list"></div><div class="question-actions"><button id="previous-question" class="text-button" type="button">← <span>Previous</span></button><button id="next-question" class="primary-button next-button" type="button">Next question <span>→</span></button><button id="submit-exam" class="primary-button submit-button hidden" type="button">Submit exam <span>✓</span></button></div></div><p class="exam-footnote"><span>ⓘ</span> You can move between questions before submitting.</p></div></div>
+      </section>
+
+      <section id="result-view" class="result-view hidden"></section>
+      <section id="admin-view" class="admin-view hidden"></section>
+    </main>
+    <footer class="site-footer"><span>© 2026 Pre Exam Site</span><span>Built for a better way to practise <i>✳</i></span></footer>
+  </div>
+  <div id="admin-login" class="login-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <form id="admin-login-form" class="login-card">
+      <button id="login-close" class="login-close" type="button" aria-label="Close">×</button>
+      <div class="eyebrow"><span class="eyebrow-line"></span> ADMIN ACCESS</div>
+      <h2 id="login-title">Welcome back.</h2>
+      <p>Enter the admin password to manage this exam.</p>
+      <label for="admin-password">Admin password</label>
+      <input id="admin-password" type="password" autocomplete="current-password" required>
+      <div id="login-error" class="login-error" role="alert"></div>
+      <button id="login-submit" class="primary-button" type="submit">Continue <span>→</span></button>
+    </form>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
